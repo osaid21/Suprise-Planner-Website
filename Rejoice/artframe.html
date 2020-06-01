@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sona Template">
+    <meta name="keywords" content="Sona, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'Checkout/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkoutcss/flaticon.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'Checkout/css/style.css' %}" type="text/css">
+     <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+      <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet"> 
+  <link href="{% static 'assets/css/style00.css' %}" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+   <style>
+
+   .hero-section
+   {
+     background-image: url("/static/images/Dine on terrace.jpg");
+   }
+   </style>
+
+</head>
+
+<body>
+
+
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+       
+        <a href="{% url 'home' %}" class="scrollto"><img src="{% static 'assets/img/logo22.png' %}" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
+          {% if user.is_authenticated %}
+						<li> Hello, {{user.first_name}}</li>
+						<li><a href="{% url 'logout' %}">Logout</a></li>
+						{% else %}
+						<li><a href="{% url 'login' %}">Login</a></li>
+						<li><a href="{% url 'register' %}">Register</a></li>
+						{% endif %}
+            <li><a href="{% url 'plans' %}">Explore</a></li>
+        
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>Select Your Date and Time </h1>
+                        <p>Proceed For Payment and Leave Everything on Us </p>
+                       
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Book Your Package</h3>
+                        <form action="/checkout" method="post">
+                          {% csrf_token %}
+                            <div class="check-date">
+                                <label for="date-in">Enter Date</label>
+                                <input type="text" class="date-input" id="date-in" name="date">
+                                <i class="icon_calendar"></i>
+                            </div>
+              
+                           
+                            <div class="select-option">
+                                <label for="room">Time</label>
+                                <select id="room" input type="text" name="time">
+                                    <option value="">10am-2pm</option>
+                                    <option value="">3pm-8pm</option>
+                                </select>
+                            </div>
+                         
+                            <p> Order Name : Art Frame </p>
+                            <p> Total Amount : Rs 699</p>
+                      
+                          
+                            <button type="submit" value="checkout">Proceed For Payment</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      
+    </section>
+    <!-- Hero Section End -->
+
+    
+    <!-- About Us Section End -->
+
+    <!-- Services Section End -->
+   
+    
+
+   
+
+    <!-- Footer Section Begin -->
+    <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="{% static 'assets/img/logo23.png' %}" alt="Rejoice">
+            <p>Our group first task is to develop website idea was defining what the problems are for people living in india for those who planning to do something  special for their loved ones</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'aboutus' %}">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Features</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'home' %}">Buy Gifts</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'aboutus' %}">Plan Your Occasion</a></li>
+            
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Sikkim Manipal Instute of Technology <br>
+              Rangpo<br>
+              Majhitar Sikkim <br>
+              <strong>Phone:</strong> +7897824028<br>
+              <strong>Email:</strong> mohdosaid4@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+   
+
+    <!-- Js Plugins -->
+     <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/wow/wow.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/superfish/superfish.min.js' %}"></script>
+     <script src="{% static 'assets/vendor/hoverIntent/hoverIntent.js' %}"></script>
+    <script src="{% static 'Checkout/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'Checkout/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'Checkout/js/main.js' %}"></script>
+</body>
+
+</html>

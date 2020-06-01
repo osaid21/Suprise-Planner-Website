@@ -1,0 +1,529 @@
+
+body
+{
+    height:auto;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+header{
+  height: 100%;
+}
+.jumbotron-fluid
+{
+    overflow: hidden;
+    width:auto;
+    background-color: transparent;
+    height:100%;
+
+}
+
+.d
+{
+    width:100%;
+    height:100%;
+}
+  .list-unstyled
+  {
+      text-decoration: none;
+      color:white;
+  }
+  .fo
+  {
+        margin-top:80px;
+        width:25%;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        border:3px;
+        
+  }
+  .carousel-item {
+    height: 100%;
+    min-height: 350px;
+    width:100%;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .site-footer
+  {
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
+  .site-footer hr
+  {
+    border-top-color:#bbb;
+    opacity:0.5
+  }
+  .site-footer hr.small
+  {
+    margin:20px 0
+  }
+  .site-footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .site-footer a
+  {
+    color:#737373;
+  }
+  .site-footer a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links
+  {
+    padding-left:0;
+    list-style:none
+  }
+  .footer-links li
+  {
+    display:block
+  }
+  .footer-links a
+  {
+    color:#737373
+  }
+  .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links.inline li
+  {
+    display:inline-block
+  }
+  .site-footer .social-icons
+  {
+    text-align:right
+  }
+  .site-footer .social-icons a
+  {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+  }
+  .copyright-text
+  {
+    margin:0
+  }
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
+    .site-footer
+    {
+      padding-bottom:0
+    }
+    .site-footer .copyright-text,.site-footer .social-icons
+    {
+      text-align:center
+    }
+  }
+  .social-icons
+  {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none;
+    padding-bottom: 15px;
+  }
+  .social-icons li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+    color:#fff;
+    background-color:#29aafe
+  }
+  .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  .social-icons a.facebook:hover
+  {
+    background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+    background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+    background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+    background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
+    .social-icons li.title
+    {
+      display:block;
+      margin-right:0;
+      font-weight:600
+    }
+
+}
+.bg-navbar
+{
+    background-color: #563d7c;
+    color:white;
+    height:54px;
+}
+.navlink
+{
+     color:white;
+}
+.navbar-brand
+{
+    color:white;
+    font:white;
+}
+.home
+{
+    color:white;
+}
+.collapse navbar-collapse
+{
+    color:white;
+}
+.nav-item active
+{
+    color:white;
+
+
+}
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+
+.text-center login-title
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+@media (max-width: 668px) {
+    #social-sign-in .icon-5x {
+        font-size: 7em;
+    }
+}
+@media (max-width: 480px) {
+    #social-sign-in .icon-5x {
+        font-size: 4.5em;
+    }
+}
+@media (min-width: 1199px) {
+    #social-sign-in .icon-5x {
+        font-size: 7em;
+    }
+}
+.well h3 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#signupForm .input-group {
+    margin-bottom: 10px;
+}
+
+/* get font-awesome to work with BS3 */
+.input-group-addon .icon-2x {
+    width: 28px;
+    min-width: 28px;
+    display: inline-block;
+}
+
+.inline-block > li {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+/* Why doesn't OR work? Tested with Chrome 29, FF 24 or IE 11 */
+@media (max-width: 480px), (min-width: 1199px) { 
+    #social-sign-in .icon-5x {
+        font-size: 7em;
+    }
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    text-decoration: none;
+}
+
+.checkbox-inline, .radio-inline {
+    margin-right: 48px;
+    font-size: 16px;
+}
+.row
+{
+    margin-left:50px;
+    width:auto;
+    margin-top:30px;
+}
+.name{
+
+    width:20px;
+}
+.row1
+{
+    margin-left:423px;
+    margin-top:80px;
+}
+.f1
+{
+    background-color:transparent;
+    background-image:url("gettyimages-534701292-640x640.jpg");
+    height: 100%;
+}
+#carouselExampleIndicators{
+  height: 100%;
+}
+.address
+{
+    font-family:'Open Sans';
+}
+.footer-links
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav-item dropdown
+{
+    float:right;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #42b078;
+    display:flex;
+  }
+  
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+  }
+  
+  .hovereffect img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display:flex;
+  }
+  
+  .hovereffect:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  
+  .hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    overflow: hidden;
+    padding: 0.5em 0;
+    background-color: transparent;
+  }
+  
+  .hovereffect h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+  }
+  
+  .hovereffect:hover h2:after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  
+  .hovereffect a, .hovereffect p {
+    color: #FFF;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+  }
+  
+  .hovereffect:hover a, .hovereffect:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  .c1
+  {
+      
+      min-height:40px;
+      overflow: hidden;
+
+    
+
+  }
+  .hovereffect
+  {
+      display:block;
+      float:left;   
+      width:84%;
+      overflow: hidden;
+
+      
+  }
+  .img-responsive
+  {
+      float :left;
+      display:block;
+  }
+  .site-footer
+  {
+      margin-top: 10px;
+  }
+  

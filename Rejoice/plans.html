@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+<link rel="icon" href="{% static 'images/favicon.png' %}">
+
+<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/stylecss.css' %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link href="{% static 'css/stylenew.css' %}" rel="stylesheet">
+<link href="{% static 'css/newcss.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive_bootstrap_carousel_mega_min.css' %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap-theme.html' %}" rel="stylesheet">
+<link href={% static 'css/owl.theme.css'  %}" rel="stylesheet">
+
+
+</script>
+</head>
+<body>
+<div class="row container alert-msg">
+<div class="col-md-12">
+<div class="alert alert-danger col-md-12" role="alert" id="alertMsgDiv" style="display: none; z-index:100000;">Product Successfully added </div>
+</div>
+</div><div class="main-header-events evnt">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-3 hidden-sm hidden-xs">
+<div class="main-select-events">
+<div class="phone mys">
+<p><img src="{% static 'images/towhite.png' %}" class="user-img large-logo" style="width:20px;height:auto"> <span class="hidden-sm hidden-xs" style="font-weight:bold; color:white">7897824028</span></p>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-9 hidden-sm hidden-xs">
+<div class="events-logo">
+<a href="{% url 'home' %}"><img src="{% static 'images/logo31.png' %}" class="img-responsive" style="width:180px;height:auto"></a>
+</div>
+</div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-9 visible-sm visible-xs">
+<div class="events-logo">
+<a href="index.html"><img src="{% static 'images/tit01.png' %}" class="img-responsive"></a>
+</div>
+</div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-3 visible-sm visible-xs">
+<div class="main-select-events">
+<div class="phone mys">
+<p><a href="Mob:7897824028" style="color:#fff;font-size:24px;"><i class="fa fa-phone-square" aria-hidden="true"></i><span class="hidden-sm hidden-xs">1800-833-8448</a></span></p>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 hidden-xs hidden-sm">
+<div class="main-menu-events">
+<ul class="list-inline">
+<li class="">
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'customize' %}">Customize</a>
+</li>.
+{% if user.is_authenticated %}
+						<li> Hello, {{user.first_name}}</li>
+						<li><a href="{% url 'logout' %}">Logout</a></li>
+						{% else %}
+						<li><a href="{% url 'login' %}">Login</a></li>
+						{% endif %}
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+	@media only screen and (max-width:767px){
+		
+		.phone{
+			border:none;
+		}
+		.events-logo img {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px !important;
+
+
+}
+
+		
+	}
+
+   
+    
+</style>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/stylenew.css' %}" rel="stylesheet">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+<style>
+    .main-select-events .from-control {
+
+        margin-top: 0px !important;
+
+        border:1px soild #fff !important;
+        border-radius: 0px !important;
+    }
+    .main-select-events .form-control{
+        margin:10px 0px 0px 0px;
+        background: #000 !important;
+        border: 1px solid #ccc !imoportant;
+        border-radius:0px !important;
+    }
+    .select-color{
+        color:#fff !important;
+    }
+</style>
+
+<div class="events">
+<div class="container-fluid padding0">
+<div class="row">
+<div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 padding0">
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 padding0">
+<figure class="snip1581"><img src="{% static 'images/aniv.jpg' %}" alt="profile-sample2" />
+<figcaption>
+<h2>Birthday Celebrations</h2>
+<p>welcome to Rejoice...</p>
+
+</figcaption>
+</figure>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 padding0">
+<figure class="snip1581"><img src="{% static 'images/a2.jpg' %}" alt="profile-sample2" />
+<figcaption>
+<h2>Aniversary Special</h2>
+<p>welcome to Rejoice...</p>
+
+</figcaption>
+</figure>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 padding0">
+<figure class="snip1581"><img src="{% static 'images/din1.jpg' %}" alt="profile-sample2" />
+<figcaption>
+<h2>Dine Out</h2>
+ <p>welcome to Rejoice...</p>
+
+</figcaption>
+</figure>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 padding0">
+<figure class="snip1581"><img src="{% static 'images/pg2.jpg' %}" alt="profile-sample2" />
+<figcaption>
+<h2>Personalised Gifts</h2>
+<p>welcome to Rejoice...</p>
+
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="events-tabs cart-ab">
+<ul class="nav nav-tabs nav-justified">
+<li class="active"><a data-toggle="tab" href="#holidays"><img src="{% static 'images/heart.png' %}" style="width:20px;margin-right:10px;">Birthday Celebrations</a></li>
+<li><a data-toggle="tab" href="#parties">Aniversary Special</a></li>
+<li><a data-toggle="tab" href="#events">Dine Out </a></li>
+<li><a data-toggle="tab" href="#college">Personalised Gifts</a></li>
+</ul>
+<div class="tab-content">
+<div id="holidays" class="tab-pane fade in active">
+<div class="tab-text">
+<center>
+<h2 style="padding-top:30px;">Birthday Celebrations</h2>
+<p></p>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'ballondeco' %}"><img src="{% static 'images/Balloon decoration1.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Ballon Decorations</h3><hr>
+<p>Rs 799</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'birthdaycard' %}"><img src="{% static 'images/Happy-birthday-card-with-with-roses.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Birthday Card and Roses</h3><hr>
+<p>Rs 699</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'picnic' %}"><img src="{% static 'images/Picnic together.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Picnic Together</h3><hr>
+<p>Rs 3999</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'surprising' %}"><img src="{% static 'images/Surprising_every_hour_with_gifts.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Surprising Every Hour with Gifts</h3><hr>
+<p>Rs 2200</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="parties" class="tab-pane fade">
+<div class="tab-text">
+<center>
+<h2 style="padding-top:30px;">Aniversary Special</h2>
+<p>Coming Soon</p>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'miniroadtrip' %}"><img src="{% static 'images/Mini_road_trip.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Mini Road Trip</h3><hr>
+<p>Rs 2300</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'visitingamu' %}"><img src="{% static 'images/Visiting_amusement_park1.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Visiting Amusement Park</h3><hr>
+<p>Rs 2100</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'showincity' %}"><img src="{%static 'images/Show in the city.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Show in the city</h3><hr>
+<p>Rs 2500</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'photoshoot' %}"><img src="{% static 'images/Couple photoshoot1.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Couple Photoshoot</h3><hr>
+<p>Rs 100/P </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="events" class="tab-pane fade">
+<div class="tab-text">
+<center>
+<h2 style="padding-top:30px;">Dine Out</h2>
+<p></p>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'privatemovie' %}"><img src="{% static 'images/Private movie dining.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Private Movie Dining</h3><hr>
+<p>Rs 2000</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'aroyaldinner' %}"><img src="{% static 'images/A Royal Dinner.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>A Royal Dinner</h3><hr>
+<p>Rs 3200</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+ <a href="{% url 'dinnerondunes' %}"><img src="{% static 'images/Dinner on dunes.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Dinner on Dunes</h3><hr>
+<p>Rs 3399</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'dineronterace' %}"><img src="{% static 'images/Dine on Terrace.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Dine on Terace</h3><hr>
+<p>Rs 2999</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="college" class="tab-pane fade">
+<div class="tab-text">
+<center>
+<h2 style="padding-top:30px;">Personalised Gifts</h2>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'bigcute' %}"><img src="{% static 'images/Big cute friend.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Big Cute Friend</h3><hr>
+<p>Rs 2200</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'surprisebox' %}"><img src="{% static 'images/Surprise box.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Surprise Box</h3><hr>
+<p>Rs 1100</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'bouqet' %}"><img src="{% static 'images/Bouquet_of_roses.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Bouqet of Roses </h3><hr>
+<p>Rs 1299</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 events-empty-space">
+<div class="tab-img">
+<a href="{% url 'heartcollege' %}"><img src="{% static 'images/Heart collage photo frame.jpg' %}" class="img-responsive"></a>
+</div>
+<div class="sub-tabs-text">
+<h3>Heart College Photo Frame</h3><hr>
+<p>Rs 1599</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</script><div class="clearfix"></div>
+
+<div class="footer footerCls">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 text-center">
+<a href="#"><img src="{% static 'images/logo31.png' %}" style="width:100%;"></a>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 text-center">
+<div class="phone-footer">
+<p><img src="{% static 'images/phone.png' %}" style="width:15px;margin-right:10px;"><a class="phone-num" href="tel:+9461742177">9461742177</a></p>
+    <p><img src="{% static 'images/whatsapp.png' %}" style="width:15px;margin-right:10px;"> <a href="tel:+7897824028" class="phone-num">+7897824028</p>
+</div>
+</div>
+<div class="col-md-3 col-lg-3 col-sm-3 footlinks text-center">
+<ul class="list-unstyled" style="color:#f5f5f5;font-weight:bold">
+<li><a href="{% url 'aboutus' %}">About Us</a><li>
+<li><a href="">Contact Us</a><li>
+<li><a href="join-us.html">Join Us</a><li>
+<li><a href="terms-and-conditions.html">Terms and Conditions</a><li>
+<li><a href="privacy-policy.html">Privacy Policy</a><li>
+</ul>
+</div>
+<div class="Col-md-3 col-lg-3 col-sm-3 col-xs-12 hidden-sm hidden-xs text-center">
+<div class="social-icon">
+<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<a href="https://plus.google.com/" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer2 footerCls ssd">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+
+
+
+
+</script>
+<style>
+    .footer11 {
+        background: #000;
+        padding: 26px 0px 26px 0px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        margin-top: 49px;
+    }
+
+</style>
+</body>

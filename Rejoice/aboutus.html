@@ -1,0 +1,61 @@
+{% load static %}
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rejoice</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet"> 
+  <link href="{% static 'assets/css/style00.css' %}" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+       
+        <a href="{% url 'home' %}" class="scrollto"><img src="{% static 'assets/img/logo23.png' %}" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
+          {% if user.is_authenticated %}
+						<li> Hello, {{user.first_name}}</li>
+						<li><a href="{% url 'logout' %}">Logout</a></li>
+						{% else %}
+						<li><a href="{% url 'login' %}">Login</a></li>
+						<li><a href="{% url 'register' %}">Register</a></li>
+						{% endif %}
+            <li><a href="{% url 'plans' %}">Plans</a></li>
+        
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+<section id="intro">
+    <div class="intro-container wow fadeIn">
+      <p class="mb-4 pb-0">Our group first task is to develop website idea was defining what the problems are for people living in india for those who planning to do something  special for their loved ones the first problem was there are too many things that they can do but they are worried about their budget the second problem was that people has to adjust their choices and schedule plan. Considering these problems our group made decisions about our website idea which we name Rejoice. The idea is that the platform would find appropriate surprise plan like movies,long-drive,Vacations etc.</p>
+     
+     
+      <a href="{% url 'plans' %}" class="about-btn scrollto">Explore Plans</a>
+    </div>
+  </section><!-- End Intro Section -->
+
+  <main id="main">

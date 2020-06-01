@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "images" as baseUrl %}
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Rejoice</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet"> 
+  <link href="{% static 'assets/css/style00.css' %}" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+       
+        <a href="{% url 'home' %}" class="scrollto"><img src="{% static 'assets/img/logo23.png' %}" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
+          {% if user.is_authenticated %}
+						<li> Hello, {{user.first_name}}</li>
+						<li><a href="{% url 'logout' %}">Logout</a></li>
+						{% else %}
+						<li><a href="{% url 'login' %}">Login</a></li>
+						<li><a href="{% url 'register' %}">Register</a></li>
+						{% endif %}
+            <li><a href="{% url 'plans' %}">Explore</a></li>
+            <li><a href="{% url 'customize' %}">Customize</a></li>
+        
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0">Welcome To<br><span>Rejoice</span></h1>
+      <p class="mb-4 pb-0">Surprise Planner Website</p>
+     
+      <a href="{% url 'plans' %}" class="about-btn scrollto">Explore Plans</a>
+    </div>
+  </section><!-- End Intro Section -->
+
+  <main id="main">
+
+    
+
+    <!-- ======= Speakers Section ======= -->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Some Gifts</h2>
+          <p></p>
+        </div>
+       
+        <div class="row">
+       
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/comicart.jpg' %}" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'comicart' %}">Comic Art</a></h3>
+                <p>700</p>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/art.jpg' %}" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'artframe' %}">Art Frame</a></h3>
+                <p>Rs 699</p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/clipapic.jpg' %}" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'clipapic' %}">Clip A Pic</a></h3>
+                <p>Rs.600</p>
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/birthday.jpg' %}" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'bir' %}">Birthday Card</a></h3>
+                <p>Rs.900</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/memories.jpg' %}" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'memories' %}">Memories Frame</a></h3>
+                <p>Rs.1100</p>
+            
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="{% static 'assets/img/ecomic.jpg' %}" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="{% url 'ecomic' %}">E-Comic Book</a></h3>
+                <p>Rs.1200</p>
+      
+              </div>
+            </div>
+          </div>
+      
+        </div>
+         
+      </div>
+
+      
+
+      
+
+     
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="{% static 'assets/img/logo23.png' %}" alt="Rejoice">
+            <p>Our group first task is to develop website idea was defining what the problems are for people living in india for those who planning to do something  special for their loved ones</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'aboutus' %}">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Features</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'home' %}">Buy Gifts</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="{% url 'aboutus' %}">Plan Your Occasion</a></li>
+            
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Sikkim Manipal Instute of Technology <br>
+              Rangpo<br>
+              Majhitar Sikkim <br>
+              <strong>Phone:</strong> +7897824028<br>
+              <strong>Email:</strong> mohdosaid4@gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/wow/wow.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hoverIntent/hoverIntent.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
